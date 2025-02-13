@@ -9,7 +9,7 @@
 .visual-learning{
     font-size: 22px;
 }
-.button-watch-notebook{
+.button-watch-notebook a{
     background-color: var(--e-global-color-accent);
 }
 .button-main{
@@ -19,6 +19,10 @@
     border-radius: 3px;
     text-align: center;
     transform: all .3s;
+    text-decoration: none;
+}
+.button-main:hover {
+    text-decoration: none; 
 }
 .content-notebook{
     font-size: 20px;
@@ -36,11 +40,11 @@
 }
 .elementor-77070 {
     display: flex;
-    justify-content: space-between; /* Căn các phần tử cách đều */
-    align-items: center; /* Căn giữa theo chiều dọc */
-    flex-wrap: wrap; /* Đảm bảo không bị vỡ layout trên màn hình nhỏ */
+    justify-content: space-between; 
+    align-items: center; 
+    flex-wrap: wrap; 
     width: 100%;
-    background-color: #f8f8f8; /* Tùy chỉnh màu nền */
+    background-color: #f8f8f8; 
 }
 .elementor.elementor-77070 {
     position: relative;
@@ -48,8 +52,8 @@
     width: 100%;
 }
 .elementor-element.footer-child {
-    flex: 1; /* Chia đều không gian */
-    text-align: center; /* Căn giữa nội dung */
+    flex: 1; 
+    text-align: center; 
 }
 .twbb-nav-menu a{
     padding-bottom: 10px;
@@ -58,4 +62,43 @@
     color: blue !important; 
     text-decoration: underline; 
     transition: color 0.3s ease-in-out;
+}
+.custom-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+.custom-wrapper {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.custom-product-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.custom-product-image {
+    display: block;
+    margin: 0 auto;
+    width: 25x0px;
+    height: auto;
+}
+
+.custom-product-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.custom-price {
+    font-size: 18px;
+    color: #ff6600;
+    font-weight: bold;
+    margin-top: 5px;
 }

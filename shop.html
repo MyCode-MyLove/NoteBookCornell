@@ -34,15 +34,14 @@
         !function (i, n) { var o, s, e; function c(e) { try { var t = { supportTests: e, timestamp: (new Date).valueOf() }; sessionStorage.setItem(o, JSON.stringify(t)) } catch (e) { } } function p(e, t, n) { e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0); var t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data), r = (e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0), new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data)); return t.every(function (e, t) { return e === r[t] }) } function u(e, t, n) { switch (t) { case "flag": return n(e, "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f", "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f") ? !1 : !n(e, "\ud83c\uddfa\ud83c\uddf3", "\ud83c\uddfa\u200b\ud83c\uddf3") && !n(e, "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f", "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"); case "emoji": return !n(e, "\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff", "\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff") }return !1 } function f(e, t, n) { var r = "undefined" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope ? new OffscreenCanvas(300, 150) : i.createElement("canvas"), a = r.getContext("2d", { willReadFrequently: !0 }), o = (a.textBaseline = "top", a.font = "600 32px Arial", {}); return e.forEach(function (e) { o[e] = t(a, e, n) }), o } function t(e) { var t = i.createElement("script"); t.src = e, t.defer = !0, i.head.appendChild(t) } "undefined" != typeof Promise && (o = "wpEmojiSettingsSupports", s = ["flag", "emoji"], n.supports = { everything: !0, everythingExceptFlag: !0 }, e = new Promise(function (e) { i.addEventListener("DOMContentLoaded", e, { once: !0 }) }), new Promise(function (t) { var n = function () { try { var e = JSON.parse(sessionStorage.getItem(o)); if ("object" == typeof e && "number" == typeof e.timestamp && (new Date).valueOf() < e.timestamp + 604800 && "object" == typeof e.supportTests) return e.supportTests } catch (e) { } return null }(); if (!n) { if ("undefined" != typeof Worker && "undefined" != typeof OffscreenCanvas && "undefined" != typeof URL && URL.createObjectURL && "undefined" != typeof Blob) try { var e = "postMessage(" + f.toString() + "(" + [JSON.stringify(s), u.toString(), p.toString()].join(",") + "));", r = new Blob([e], { type: "text/javascript" }), a = new Worker(URL.createObjectURL(r), { name: "wpTestEmojiSupports" }); return void (a.onmessage = function (e) { c(n = e.data), a.terminate(), t(n) }) } catch (e) { } c(n = f(s, u, p)) } t(n) }).then(function (e) { for (var t in e) n.supports[t] = e[t], n.supports.everything = n.supports.everything && n.supports[t], "flag" !== t && (n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && n.supports[t]); n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && !n.supports.flag, n.DOMReady = !1, n.readyCallback = function () { n.DOMReady = !0 } }).then(function () { return e }).then(function () { var e; n.supports.everything || (n.readyCallback(), (e = n.source || {}).concatemoji ? t(e.concatemoji) : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji))) })) }((window, document), window._wpemojiSettings);
         /* ]]> */
     </script>
-    <link rel='stylesheet' id='twbb-section-generation-embed-style-css'
-        href='https://10web-site.ai/130/wp-content/plugins/tenweb-builder/Apps/SectionGeneration/assets/style/section_generation_embed.min.css?ver=1.23.15'
-        type='text/css' media='all' />
-    <link rel='stylesheet' id='elementor-frontend-css'
-        href='https://10web-site.ai/130/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.21.6'
-        type='text/css' media='all' />
-    <link rel='stylesheet' id='twbb-frontend-styles-css'
-        href='https://10web-site.ai/130/wp-content/plugins/tenweb-builder/assets/frontend/css/frontend.min.css?ver=1.23.15'
-        type='text/css' media='all' />
+    <link rel='stylesheet' href="./css/frontend.min.css" type='text/css' media='all' />
+    <link rel='stylesheet' href="./css/toolbar.css" type='text/css' media='all' />
+    <link rel='stylesheet' href="./css/post.css" type='text/css' media='all' />
+    <link rel='stylesheet' href="./css/index.css" type='text/css' media='all' />
+    <link rel='stylesheet' href="./css/styles.css" id="tenweb-website-builder-theme-style-css" type='text/css'
+        media='all' />
+    <script type="text/javascript" src="script/index.js" id="woocommerce-js" defer="defer"
+        data-wp-strategy="defer"></script>
     <style id='wp-emoji-styles-inline-css' type='text/css'>
         img.wp-smiley,
         img.emoji {
@@ -491,12 +490,6 @@
             visibility: visible;
         }
     </style>
-    <link rel='stylesheet' id='elementor-post-77071-css'
-        href='https://10web-site.ai/130/wp-content/uploads/sites/142/elementor/css/post-77071.css?ver=1727961137'
-        type='text/css' media='all' />
-    <link rel='stylesheet' id='elementor-post-77072-css'
-        href='https://10web-site.ai/130/wp-content/uploads/sites/142/elementor/css/post-77072.css?ver=1728835538'
-        type='text/css' media='all' />
     <link rel='stylesheet' id='tenweb-website-builder-open-sanse-css'
         href='https://fonts.googleapis.com/css2?family=Open+Sans%3Awght%40300%3B400%3B600%3B700%3B800&#038;display=swap&#038;ver=2.1.10'
         type='text/css' media='all' />
@@ -868,198 +861,54 @@ How awesome is that?🤯">https://10web-site.ai/130/in-drum/</div>
         twdemo_clean_url();
     </script>
     <div data-elementor-type="twbb_header" data-elementor-id="77071" class="elementor elementor-77071">
-
-        <div class="elementor-element elementor-element-41b4d885 e-con-full e-flex elementor-invisible e-con e-parent"
-            data-id="41b4d885" data-element_type="container"
-            data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInDown&quot;,&quot;animation_delay&quot;:200}">
-            <div class="elementor-element elementor-element-d97f010 e-con-full e-flex e-con e-child" data-id="d97f010"
-                data-element_type="container">
-                <div class="elementor-element elementor-element-4e5fbf9d twbb-nav-menu__align-left twbb-nav-menu__text-align-left twbb-nav-menu--indicator-classic twbb-nav-menu--toggle twbb-nav-menu--burger twbb-nav-menu--stretch yes twbb-nav-menu--dropdown-tablet elementor-widget elementor-widget-twbb-nav-menu"
-                    data-id="4e5fbf9d" data-element_type="widget"
-                    data-settings="{&quot;layout&quot;:&quot;horizontal&quot;,&quot;toggle&quot;:&quot;burger&quot;,&quot;full_width&quot;:&quot; yes&quot;}"
-                    data-widget_type="twbb-nav-menu.default">
-                    <div class="elementor-widget-container">
-                        <nav
-                            class="twbb-nav-menu--main twbb-nav-menu__container twbb-nav-menu--layout-horizontal e--pointer-none">
-                            <ul id="menu-1-4e5fbf9d" class="twbb-nav-menu twbb-menu_term_id-8463">
-                                <li
-                                    class="a:1:{i:0;s:6:&quot;a1i0s0&quot;;} menu-item menu-item-type-post_type menu-item-object-page menu-item-77065">
-                                    <a href="index.html" class="twbb-item">Trang Chủ</a>
-                                </li>
-                                <li
-                                    class="a:1:{i:0;s:6:&quot;a1i0s0&quot;;} menu-item menu-item-type-post_type menu-item-object-page menu-item-77064">
-                                    <a href="contact.html" class="twbb-item">Liên Hệ</a>
-                                </li>
-                                <li
-                                    class="a:1:{i:0;s:6:&quot;a1i0s0&quot;;} menu-item menu-item-type-post_type menu-item-object-page menu-item-77063">
-                                    <a href="about.html" class="twbb-item">Thông Tin</a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <div class="twbb-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle"
-                            aria-expanded="false">
-                            <i aria-hidden="true" role="presentation"
-                                class="twbb-menu-toggle__icon--open eicon-menu-bar"></i><i aria-hidden="true"
-                                role="presentation" class="twbb-menu-toggle__icon--close eicon-close"></i>
-                            <span class="elementor-screen-only">Menu</span>
-                        </div>
-                        <nav class="twbb-nav-menu--dropdown twbb-nav-menu__container">
-                            <ul id="menu-2-4e5fbf9d" class="twbb-nav-menu twbb-menu_term_id-8463">
-                                <li
-                                    class="a:1:{i:0;s:6:&quot;a1i0s0&quot;;} menu-item menu-item-type-post_type menu-item-object-page menu-item-77065">
-                                    <a href="index.html" class="twbb-item">Trang Chủ</a>
-                                </li>
-                                <li
-                                    class="a:1:{i:0;s:6:&quot;a1i0s0&quot;;} menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-77052 current_page_item menu-item-77064">
-                                    <a href="contact.html" aria-current="page" class="twbb-item  twbb-item-active">Liên
-                                        Hệ</a>
-                                </li>
-                                <li
-                                    class="a:1:{i:0;s:6:&quot;a1i0s0&quot;;} menu-item menu-item-type-post_type menu-item-object-page menu-item-77063">
-                                    <a href="about.html" class="twbb-item">Thông Tin</a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <style>
-                            .twbb-nav-menu ul {
-                                display: none;
-                            }
-                        </style>
-                    </div>
+        <div>
+            <div class="toolbar">
+                <div class="left">
+                    <a href="index.html">Trang chủ</a>
+                    <a href="contact.html">Liên hệ</a>
+                    <a href="about.html">Thông tin</a>
+                </div>
+                <div class="center">
+                    <span>Note Book</span>
+                </div>
+                <div class="right">
+                    <span class="book-icon">📖</span>
+                    <span class="menu-icon" onclick="toggleMenu()">☰</span>
                 </div>
             </div>
-            <div class="elementor-element elementor-element-5bb49701 e-con-full e-flex e-con e-child" data-id="5bb49701"
-                data-element_type="container">
-                <div class="elementor-element elementor-element-99798fa elementor-widget elementor-widget-heading"
-                    data-id="99798fa" data-element_type="widget" data-widget_type="heading.default">
-                    <div class="elementor-widget-container">
-                        <h2 class="elementor-heading-title elementor-size-default"><a>Book Store</a></h2>
-                    </div>
-                </div>
-            </div>
-            <div class="elementor-element elementor-element-7540f9db e-con-full e-flex e-con e-child" data-id="7540f9db"
-                data-element_type="container">
-                <div class="elementor-element elementor-element-baf7a9b elementor-view-default elementor-widget elementor-widget-icon"
-                    data-id="baf7a9b" data-element_type="widget" data-widget_type="icon.default">
-                    <div class="elementor-widget-container">
-                        <div class="elementor-icon-wrapper">
-                            <div class="elementor-icon">
-                                <i aria-hidden="true" class="fas fa-book-open"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="#">Trang chủ</a>
+                <a href="#">Liên hệ</a>
+                <a href="#">Thông tin</a>
             </div>
         </div>
     </div>
-    <div data-elementor-type="twbb_archive" data-elementor-id="77072" class="elementor elementor-77072">
-        <div class="elementor-element elementor-element-758fb17a e-con-full e-flex e-con e-parent" data-id="758fb17a"
-            data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-            <div class="elementor-element elementor-element-28659dea e-con-full e-flex e-con e-child" data-id="28659dea"
-                data-element_type="container">
-                <div class="elementor-element elementor-element-7f5df04 elementor-grid-3 elementor-product-loop-item--align-center elementor-grid-tablet-2 elementor-grid-mobile-1 elementor-products-grid elementor-wc-products elementor-show-pagination-border-yes elementor-widget elementor-widget-twbb_woocommerce-products"
-                    data-id="7f5df04" data-element_type="widget" data-widget_type="twbb_woocommerce-products.default">
-                    <div class="elementor-widget-container">
-                        <div class="twbb_woocommerce-products-ajax-paginate">
-                            <div class="woocommerce columns-4 ">
-                                <div class="woocommerce-notices-wrapper"></div>
-                                <ul class="products elementor-grid columns-4">
-                                    <li
-                                        class="product type-product post-77043 status-publish first instock product_cat-cornell-note-books-in-drum has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-                                        <div class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
-                                            <span class="onsale">Sale!</span>
-                                            <img 
-                                                src="Images/notebookcornell.png"
-                                                class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt
-                                                decoding="async" />
-                                            <h2 class="woocommerce-loop-product__title">Cornell
-                                                Note Book Green</h2>
-                                            <span class="price">
-                                                <ins><span class="woocommerce-Price-amount amount"><bdi><span
-                                                                class="woocommerce-Price-currencySymbol"></span>40.000VND</bdi></span></ins></span>
-                                        </div>
-                                    </li>
-                                    <!-- <li
-                                        class="product type-product post-77048 status-publish instock product_cat-note-taking-systems-in-drum has-post-thumbnail shipping-taxable purchasable product-type-simple">
-                                        <div class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img
-                                                width="1400" height="1750"
-                                                src="https://i.pinimg.com/736x/f0/91/2d/f0912d0bb5f454f4207bd792f9743ab7.jpg"
-                                                class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt
-                                                decoding="async" />
-                                            <h2 class="woocommerce-loop-product__title">Cornell
-                                                Note Book Purple</h2>
-                                            <span class="price"><span class="woocommerce-Price-amount amount"><bdi><span
-                                                            class="woocommerce-Price-currencySymbol"></span>50.000VND</bdi></span></span>
-                                        </div>
-                                    </li>
-                                    <li
-                                        class="product type-product post-77044 status-publish instock product_cat-study-guides-in-drum has-post-thumbnail shipping-taxable purchasable product-type-simple">
-                                        <a class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img
-                                                width="1000" height="1000"
-                                                src="https://i.pinimg.com/736x/7e/69/25/7e692568a22c56a4ae92c4ca69ac5d21.jpg"
-                                                class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt
-                                                decoding="async" />
-                                            <h2 class="woocommerce-loop-product__title">Cornell
-                                                Note Book Prey</h2>
-                                            <span class="price"><span class="woocommerce-Price-amount amount"><bdi><span
-                                                            class="woocommerce-Price-currencySymbol"></span>49.000VND</bdi></span></span>
-                                        </a>
-                                    </li>
-                                    <li
-                                        class="product type-product post-77047 status-publish last instock product_cat-study-aids-in-drum has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-                                        <div class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
-                                            <span class="onsale">Sale!</span>
-                                            <img loading="lazy" width="1000" height="1000"
-                                                src="https://i.pinimg.com/564x/7c/cf/f9/7ccff9f4811d0185c5b4d77599e01790.jpg"
-                                                class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt
-                                                decoding="async" />
-                                            <h2 class="woocommerce-loop-product__title">Cornell
-                                                Note Book Poop</h2>
-                                            <span class="price">
-                                                <ins><span class="woocommerce-Price-amount amount"><bdi><span
-                                                                class="woocommerce-Price-currencySymbol"></span>39.000VND</bdi></span></ins></span>
-                                        </div>
-                                    </li>
-                                    <li
-                                        class="product type-product post-77046 status-publish first instock product_cat-learning-tools-in-drum has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-                                        <div class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
-                                            <span class="onsale">Sale!</span>
-                                            <img loading="lazy" width="1280" height="1920"
-                                                src="https://i.pinimg.com/564x/68/9f/0e/689f0e2c1edb86b0c1691615d24d4dd2.jpg"
-                                                class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt
-                                                decoding="async" />
-                                            <h2 class="woocommerce-loop-product__title">Cornell
-                                                Note Book Marbles</h2>
-                                            <span class="price">
-                                                <ins><span class="woocommerce-Price-amount amount"><bdi><span
-                                                                class="woocommerce-Price-currencySymbol"></span>39.000VND</bdi></span></ins></span>
-                                        </div>
-                                    </li>
-                                    <li
-                                        class="product type-product post-77045 status-publish instock product_cat-educational-videos-in-drum has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-                                        <div class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
-                                            <span class="onsale">Sale!</span>
-                                            <img loading="lazy" width="1000" height="1000"
-                                                src="https://i.pinimg.com/564x/29/e1/3e/29e13e6c8240113b125da3070b17b29d.jpg"
-                                                class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt
-                                                decoding="async" />
-                                            <h2 class="woocommerce-loop-product__title">Cornell
-                                                Note Book Basic
-                                            </h2>
-                                            <span class="price">
-                                                <ins><span class="woocommerce-Price-amount amount"><bdi><span
-                                                                class="woocommerce-Price-currencySymbol"></span>54.000VND</bdi></span></ins></span>
-                                        </div>
-                                    </li> -->
-                                </ul>
+    <div class="custom-container">
+        <div class="custom-wrapper">
+            <div class="custom-products">
+                <div class="custom-product-list">
+                    <ul class="custom-grid">
+                        <li class="custom-product-item">
+                            <div class="custom-product-link">
+                                <span class="custom-sale-label">Sale!</span>
+                                <img 
+                                    src="Images/notebookcornell.png" 
+                                    class="custom-product-image" 
+                                    alt="Cornell Note Book Green" 
+                                    decoding="async" 
+                                />
+                                <h2 class="custom-product-title">Cornell Note Book Green</h2>
+                                <span class="custom-price">
+                                    <ins><span class="custom-price-amount">40.000VND</span></ins>
+                                </span>
                             </div>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
+    
     <div data-elementor-type="twbb_footer" data-elementor-id="77070" class="elementor elementor-77070">
         <div class="elementor-element elementor-element-61c72f54 e-con-full e-flex e-con e-parent" data-id="61c72f54"
             data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -1263,20 +1112,11 @@ How awesome is that?🤯">https://10web-site.ai/130/in-drum/</div>
     <link rel='stylesheet' id='font-awesome-4-shim-css'
         href='https://10web-site.ai/130/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=3.21.6'
         type='text/css' media='all' />
-    <link rel='stylesheet' id='elementor-post-77070-css'
-        href='https://10web-site.ai/130/wp-content/uploads/sites/142/elementor/css/post-77070.css?ver=1727961138'
-        type='text/css' media='all' />
     <link rel='stylesheet' id='elementor-icons-css'
         href='https://10web-site.ai/130/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.29.0'
         type='text/css' media='all' />
     <link rel='stylesheet' id='swiper-css'
         href='https://10web-site.ai/130/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5'
-        type='text/css' media='all' />
-    <link rel='stylesheet' id='elementor-post-77074-css'
-        href='https://10web-site.ai/130/wp-content/uploads/sites/142/elementor/css/post-77074.css?ver=1727961137'
-        type='text/css' media='all' />
-    <link rel='stylesheet' id='twbb-pro-features-css'
-        href='https://10web-site.ai/130/wp-content/plugins/tenweb-builder/pro-features/assets/css/frontend.min.css?ver=1.23.15'
         type='text/css' media='all' />
     <link rel='stylesheet' id='elementor-global-css'
         href='https://10web-site.ai/130/wp-content/uploads/sites/142/elementor/css/global.css?ver=1727251194'
