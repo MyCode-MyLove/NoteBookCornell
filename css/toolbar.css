@@ -1,0 +1,91 @@
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.left {
+    display: flex;
+    flex: 1;
+}
+.left a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: normal;
+}
+.center {
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+}
+.book-icon {
+    font-size: 24px;
+}
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    width: 150px; 
+    background: rgba(255, 255, 255, 0.98); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    padding: 15px;
+    border-radius: 12px; 
+    font-size: 18px;
+    text-align: center;
+    z-index: 9999; 
+}
+.mobile-menu a {
+    text-decoration: none;
+    color: #333;
+    padding: 14px 0;
+    display: block;
+    transition: background 0.3s ease;
+}
+.mobile-menu a:hover {
+    background: #f0f0f0;
+    border-radius: 5px;
+}
+.left a.active {
+    color: #007bff; 
+    font-weight: normal;
+    text-decoration: none;
+}
+.mobile-menu a {
+    font-weight: normal; 
+}
+
+.toolbar {
+    font-size: 18px; 
+}
+
+.left a, .mobile-menu a {
+    font-size: 16px; 
+}
+
+@media (max-width: 768px) {
+    .left {
+        display: none;
+    }
+    .book-icon {
+        display: none; 
+    }
+    .menu-icon {
+        display: block; 
+    }
+}

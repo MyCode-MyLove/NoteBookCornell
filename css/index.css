@@ -1,0 +1,61 @@
+.header {
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 700; 
+    color: #333; 
+    text-transform: uppercase; 
+    text-align: center; 
+}
+.visual-learning{
+    font-size: 22px;
+}
+.button-watch-notebook{
+    background-color: var(--e-global-color-accent);
+}
+.button-main{
+    display: inline-block;
+    background-color: var(--e-global-color-accent);
+    padding: 12px 24px;
+    border-radius: 3px;
+    text-align: center;
+    transform: all .3s;
+}
+.content-notebook{
+    font-size: 20px;
+    font-weight: bold;
+}
+.story-title{
+    color: var(--e-global-color-accent);
+}
+.story-successful, .feedback-book{
+    color: white;
+}
+.name-feedback{
+    font-weight: bold;
+    font-size: 16px;
+}
+.elementor-77070 {
+    display: flex;
+    justify-content: space-between; /* Căn các phần tử cách đều */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    flex-wrap: wrap; /* Đảm bảo không bị vỡ layout trên màn hình nhỏ */
+    width: 100%;
+    background-color: #f8f8f8; /* Tùy chỉnh màu nền */
+}
+.elementor.elementor-77070 {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.elementor-element.footer-child {
+    flex: 1; /* Chia đều không gian */
+    text-align: center; /* Căn giữa nội dung */
+}
+.twbb-nav-menu a{
+    padding-bottom: 10px;
+}
+.twbb-item:hover {
+    color: blue !important; 
+    text-decoration: underline; 
+    transition: color 0.3s ease-in-out;
+}
