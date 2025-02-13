@@ -66,6 +66,9 @@
     font-weight: normal;
     text-decoration: none;
 }
+.left a{
+    text-decoration: none;
+}
 .mobile-menu a {
     font-weight: normal; 
 }
@@ -77,7 +80,9 @@
 .left a, .mobile-menu a {
     font-size: 16px; 
 }
-
+.left a:hover{
+text-decoration: none;
+}
 @media (max-width: 768px) {
     .left {
         display: none;
