@@ -81,12 +81,14 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-top: 20px;
 }
 
 .custom-product-image {
+    margin-top: 10px;
     display: block;
     margin: 0 auto;
-    width: 260px;
+    width: 800px;
     height: auto;
 }
 
@@ -101,4 +103,8 @@
     color: #ff6600;
     font-weight: bold;
     margin-top: 5px;
+}
+.book-icon{
+    height: 40px;
+    width: 40px;
 }
