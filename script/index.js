@@ -8,18 +8,29 @@ function toggleMenu() {
     menu.style.display = menu.style.display === "flex" ? "none" : "flex";
 }
 document.addEventListener("DOMContentLoaded", function () {
-    var links = document.querySelectorAll(".left a");
-    var currentPath = window.location.pathname;
+    let menuItems = document.querySelectorAll(".toolbar a");
 
-    if (currentPath === "/" || currentPath.endsWith("index.html")) {
-        links[0].classList.add("active"); 
-    }
+    // Mặc định chọn "Trang chủ" khi tải trang
+    menuItems[0].classList.add("active");
 
-    links.forEach(function (link) {
-        if (link.href.includes(currentPath)) {
-            link.classList.add("active");
-        } else {
-            link.classList.remove("active");
-        }
+    menuItems.forEach(item => {
+        item.addEventListener("click", function () {
+            // Xóa active của tất cả menu
+            menuItems.forEach(i => i.classList.remove("active"));
+            // Thêm active cho mục được nhấn
+            this.classList.add("active");
+        });
     });
+    const titles = document.querySelectorAll(".title-cornell");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+        });
+    }, { threshold: 0.3 }); // Kích hoạt khi 30% phần tử xuất hiện
+
+    titles.forEach((title) => observer.observe(title));
 });
+

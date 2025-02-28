@@ -8,11 +8,23 @@
 }
 .visual-learning{
     font-size: 22px;
+    color: white;
+}
+.related-information{
+    color: white;
 }
 .button-watch-notebook a{
     background-color: var(--e-global-color-accent);
 }
-.button-main{
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    50% { transform: translateX(3px); }
+    75% { transform: translateX(-3px); }
+    100% { transform: translateX(0); }
+}
+
+.button-main {
     display: inline-block;
     background-color: var(--e-global-color-accent);
     padding: 12px 24px;
@@ -20,9 +32,12 @@
     text-align: center;
     transform: all .3s;
     text-decoration: none;
+    animation: shake 10s ease-in-out infinite;
 }
+
 .button-main:hover {
     text-decoration: none; 
+    animation: shake 0.3s ease-in-out;
 }
 .content-notebook{
     font-size: 20px;
@@ -107,4 +122,21 @@
 .book-icon{
     height: 40px;
     width: 40px;
+}
+.header {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff5722; 
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.elementor-heading-title {
+    font-family: 'Nunito', sans-serif; 
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.6;
 }
